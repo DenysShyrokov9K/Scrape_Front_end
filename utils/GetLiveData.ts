@@ -36,7 +36,7 @@ export async function getLiveManufacturerData({
           partnumbers.map(async (keyword: string) => {
             keyword.trim().replace("/", "&45F");
             const response = await axios.get(
-              `https://scrapper.taraqe.com/molex/${keyword}`
+              `http://147.189.161.152/molex/${keyword}`
             );
 
             if (response && response.data.status !== 404) {
@@ -62,7 +62,7 @@ export async function getLiveManufacturerData({
         const getData = async (index) => {
           const partnumber = partnumbers[index];
           const response = await axios.get(
-            `https://scrapper.taraqe.com/molexList/${partnumber}`
+            `http://147.189.161.152/molexList/${partnumber}`
           );
           if (response && response.data.status !== 404) {
             rawData = [...rawData, ...[response.data]];
@@ -78,7 +78,7 @@ export async function getLiveManufacturerData({
         // await Promise.all(
         //   partnumbers.map(async (partnumber) => {
         //     const response = await axios.get(
-        //       `https://scrapper.taraqe.com/phoenix/${partnumber}`
+        //       `http://147.189.161.152/phoenix/${partnumber}`
         //     );
         //     console.log(response.data);
         //     if (response && response.data.status !== 404) {
@@ -104,7 +104,7 @@ export async function getLiveManufacturerData({
         partnumbers.map(async (keyword: string) => {
           keyword.trim().replace("/", "&45F");
           const response = await axios.get(
-            `https://scrapper.taraqe.com/scrap_newark/${keyword}`
+            `http://147.189.161.152/scrap_newark/${keyword}`
           );
 
           if (response && response.data.status !== 404) {
@@ -123,7 +123,7 @@ export async function getLiveManufacturerData({
       //   let rawData: any = [];
       //   let failedData: any = [];
       //   const response = await axios.get(
-      //     `https://scrapper.taraqe.com/scrap_newark/${partnumbers}`
+      //     `http://147.189.161.152/scrap_newark/${partnumbers}`
       //   );
       //   console.log(response.data)
       //   if (response.data.length) {
@@ -153,7 +153,7 @@ export async function getLiveManufacturerData({
         partnumbers.map(async (keyword: string) => {
           keyword.trim().replace("/", "&45F");
           const response = await axios.get(
-            `https://scrapper.taraqe.com/scrap_panduit/${keyword}`
+            `http://147.189.161.152/scrap_panduit/${keyword}`
           );
 
           if (response && response.data.status !== 404) {
@@ -180,7 +180,7 @@ export async function getLiveManufacturerData({
             console.log(keyword);
             keyword = keyword.trim().replace("/", "&45F");
             const response = await axios.get(
-              `https://scrapper.taraqe.com/scrap_alphawire/${keyword}`
+              `http://147.189.161.152/scrap_alphawire/${keyword}`
             );
 
             if (response && response.data.status !== 404) {
@@ -201,7 +201,7 @@ export async function getLiveManufacturerData({
       //   console.log("-----------------TDK1111111------------------");
       //   console.log("partnumber:", partnumbers);
       //   const response = await axios.post(
-      //     // `https://scrapper.taraqe.com/scrap_tdk_list`, { parts: partnumbers }
+      //     // `http://147.189.161.152/scrap_tdk_list`, { parts: partnumbers }
       //     `http://147.189.161.152/scrap_alphawire_list`,
       //     { parts: partnumbers }
       //   );
@@ -234,7 +234,7 @@ export async function getLiveManufacturerData({
             console.log(keyword);
             keyword = keyword.trim().replace("/", "&45F");
             const response = await axios.get(
-              `https://scrapper.taraqe.com/scrap_analog/${keyword}`
+              `http://147.189.161.152/scrap_analog/${keyword}`
             );
 
             if (response && response.data.status !== 404) {
@@ -260,7 +260,7 @@ export async function getLiveManufacturerData({
       // await Promise.all(
       //   partnumbers.map(async (keyword: string) => {
       //     const response = await axios.get(
-      //       `https://scrapper.taraqe.com/scrap_festo/${keyword}`
+      //       `http://147.189.161.152/scrap_festo/${keyword}`
       //     );
 
       //     if (response && response.data.status !== 404) {
@@ -280,7 +280,7 @@ export async function getLiveManufacturerData({
       const getData = async (index) => {
         const partnumber = partnumbers[index];
         const response = await axios.get(
-          `https://scrapper.taraqe.com/scrap_festo/${partnumber}`
+          `http://147.189.161.152/scrap_festo/${partnumber}`
         );
         if (response && response.data.status !== 404) {
           rawData = [...rawData, ...[response.data]];
@@ -307,8 +307,8 @@ export async function getLiveManufacturerData({
           partnumbers.map(async (keyword: string) => {
             keyword.trim().replace("/", "&45F");
             const response = await axios.get(
-              // `https://scrapper.taraqe.com/scrap_murata/${keyword}`
-              `https://scrapper.taraqe.com/scrap_murata/${keyword}`
+              // `http://147.189.161.152/scrap_murata/${keyword}`
+              `http://147.189.161.152/scrap_murata/${keyword}`
             );
             if (response && response.data.status !== 404) {
               rawData = [...rawData, ...[response.data]];
@@ -329,8 +329,8 @@ export async function getLiveManufacturerData({
       let rawData: any = [];
       let failedData: any = [];
       const response = await axios.post(
-        // `https://scrapper.taraqe.com/scrap_murata`, { parts: partnumbers }
-        `https://scrapper.taraqe.com/scrap_murata`,
+        // `http://147.189.161.152/scrap_murata`, { parts: partnumbers }
+        `http://147.189.161.152/scrap_murata`,
         { parts: partnumbers }
       );
       console.log(response.data);
@@ -358,7 +358,7 @@ export async function getLiveManufacturerData({
           partnumbers.map(async (keyword: string) => {
             keyword.trim().replace("/", "&45F");
             const response = await axios.get(
-              `https://scrapper.taraqe.com/scrap_murata/${keyword}`
+              `http://147.189.161.152/scrap_murata/${keyword}`
             );
 
             if (response && response.data.status !== 404) {
@@ -376,7 +376,7 @@ export async function getLiveManufacturerData({
         let rawData: any = [];
         let failedData: any = [];
         const response = await axios.get(
-          `https://scrapper.taraqe.com/scrap_murata/${partnumbers}`
+          `http://147.189.161.152/scrap_murata/${partnumbers}`
         );
         console.log(response.data);
         if (response.data.length) {
@@ -407,7 +407,7 @@ export async function getLiveManufacturerData({
           keyword = keyword.trim().replace("/", "&45F");
           console.log(keyword);
           const response = await axios.get(
-            `https://scrapper.taraqe.com/scrap_ti/${keyword}`
+            `http://147.189.161.152/scrap_ti/${keyword}`
           );
 
           if (response && response.data.status !== 404) {
@@ -426,7 +426,7 @@ export async function getLiveManufacturerData({
       //   let rawData: any = [];
       //   let failedData: any = [];
       //   const response = await axios.get(
-      //     `https://scrapper.taraqe.com/scrap_ti/${partnumbers}`
+      //     `http://147.189.161.152/scrap_ti/${partnumbers}`
       //   );
       //   console.log(response.data)
       //   if (response.data.length) {
@@ -455,7 +455,7 @@ export async function getLiveManufacturerData({
       const getData = async (index) => {
         const partnumber = partnumbers[index];
         const response = await axios.get(
-          `https://scrapper.taraqe.com/scrap_3m/${partnumber}`
+          `http://147.189.161.152/scrap_3m/${partnumber}`
         );
         if (response && response.data.status !== 404) {
           rawData = [...rawData, ...[response.data]];
@@ -476,7 +476,7 @@ export async function getLiveManufacturerData({
       // await Promise.all(
       //   partnumbers.map(async (keyword: string) => {
       //     const response = await axios.get(
-      //       `https://scrapper.taraqe.com/scrap_3m/${keyword}`
+      //       `http://147.189.161.152/scrap_3m/${keyword}`
       //     );
 
       //     if (response && response.data.status !== 404) {
@@ -500,7 +500,7 @@ export async function getLiveManufacturerData({
       partnumbers.map(async (partnumber) => {
         partnumber = partnumber.replace(/\//g, ":");
         const response = await axios.get(
-          `https://scrapper.taraqe.com/maxim/${partnumber}`
+          `http://147.189.161.152/maxim/${partnumber}`
         );
         if (response && response.data.status !== 404) {
           rawData = [...rawData, ...[response.data]];
@@ -521,7 +521,7 @@ export async function getLiveManufacturerData({
         partnumbers.map(async (keyword: string) => {
           keyword.trim().replace("/", "&45F");
           const response = await axios.get(
-            `https://scrapper.taraqe.com/onsemi/${keyword}`
+            `http://147.189.161.152/onsemi/${keyword}`
           );
 
           if (response && response.data.status !== 404) {
@@ -547,7 +547,7 @@ export async function getLiveManufacturerData({
         partnumbers.map(async (keyword: string) => {
           keyword.trim().replace("/", "&45F");
           const response = await axios.get(
-            `https://scrapper.taraqe.com/omron/${keyword}`
+            `http://147.189.161.152/omron/${keyword}`
           );
 
           if (response && response.data.status !== 404) {
@@ -574,7 +574,7 @@ export async function getLiveManufacturerData({
         partnumbers.map(async (keyword: string) => {
           keyword.trim().replace("/", "&45F");
           const response = await axios.get(
-            `https://scrapper.taraqe.com/wago/${keyword}`
+            `http://147.189.161.152/wago/${keyword}`
           );
           if (response && response.data.status !== 404) {
             rawData = [...rawData, ...[response.data]];
@@ -602,8 +602,8 @@ export async function getLiveManufacturerData({
           partnumbers.map(async (keyword: string) => {
             keyword.trim().replace("/", "&45F");
             const response = await axios.get(
-              // `https://scrapper.taraqe.com/scrap_tdk/${keyword}`
-              `https://scrapper.taraqe.com/scrap_tdk/${keyword}`
+              // `http://147.189.161.152/scrap_tdk/${keyword}`
+              `http://147.189.161.152/scrap_tdk/${keyword}`
             );
             if (response && response.data.status !== 404) {
               rawData = [...rawData, ...[response.data]];
@@ -626,8 +626,8 @@ export async function getLiveManufacturerData({
       console.log("-----------------TDK1111111------------------");
       console.log("partnumber:", partnumbers);
       const response = await axios.post(
-        // `https://scrapper.taraqe.com/scrap_tdk_list`, { parts: partnumbers }
-        `https://scrapper.taraqe.com/scrap_tdk_list`,
+        // `http://147.189.161.152/scrap_tdk_list`, { parts: partnumbers }
+        `http://147.189.161.152/scrap_tdk_list`,
         { parts: partnumbers }
       );
       console.log(response.data);
@@ -655,8 +655,8 @@ export async function getLiveManufacturerData({
           partnumbers.map(async (keyword: string) => {
             keyword.trim().replace("/", "&45F");
             const response = await axios.get(
-              // `https://scrapper.taraqe.com/scrap_vishay/${keyword}`
-              `https://scrapper.taraqe.com/scrap_vishay/${keyword}`
+              // `http://147.189.161.152/scrap_vishay/${keyword}`
+              `http://147.189.161.152/scrap_vishay/${keyword}`
             );
             console.log(response);
             if (response && response.data.status !== 404) {
@@ -678,8 +678,8 @@ export async function getLiveManufacturerData({
       let rawData: any = [];
       let failedData: any = [];
       const response = await axios.post(
-        // `https://scrapper.taraqe.com/scrap_vishay_list`, { parts: partnumbers }
-        `https://scrapper.taraqe.com/scrap_vishay_list`,
+        // `http://147.189.161.152/scrap_vishay_list`, { parts: partnumbers }
+        `http://147.189.161.152/scrap_vishay_list`,
         { parts: partnumbers }
       );
       console.log(response, "-----");
@@ -707,8 +707,8 @@ export async function getLiveManufacturerData({
           partnumbers.map(async (keyword: string) => {
             keyword.trim().replace("/", "&45F");
             const response = await axios.get(
-              // `https://scrapper.taraqe.com/scrap_microchip/${keyword}`
-              `https://scrapper.taraqe.com/scrap_microchip/${keyword}`
+              // `http://147.189.161.152/scrap_microchip/${keyword}`
+              `http://147.189.161.152/scrap_microchip/${keyword}`
             );
             console.log(response, "------ in microchip-------");
             if (response && response.data.status !== 404) {
@@ -730,8 +730,8 @@ export async function getLiveManufacturerData({
       let rawData: any = [];
       let failedData: any = [];
       const response = await axios.post(
-        // `https://scrapper.taraqe.com/scrap_microchip_list`, { parts: partnumbers }
-        `https://scrapper.taraqe.com/scrap_microchip_list`,
+        // `http://147.189.161.152/scrap_microchip_list`, { parts: partnumbers }
+        `http://147.189.161.152/scrap_microchip_list`,
         { parts: partnumbers }
       );
       console.log(response.data);
@@ -759,8 +759,8 @@ export async function getLiveManufacturerData({
           partnumbers.map(async (keyword: string) => {
             keyword.trim().replace("/", "&45F");
             const response = await axios.get(
-              // `https://scrapper.taraqe.com/scrap_fair_rite/${keyword}`
-              `https://scrapper.taraqe.com/scrap_fair_rite/${keyword}`
+              // `http://147.189.161.152/scrap_fair_rite/${keyword}`
+              `http://147.189.161.152/scrap_fair_rite/${keyword}`
             );
             if (response && response.data.status !== 404) {
               rawData = [...rawData, ...[response.data]];
@@ -780,9 +780,9 @@ export async function getLiveManufacturerData({
       let rawData: any = [];
       let failedData: any = [];
       const response = await axios.post(
-        // `https://scrapper.taraqe.com/scrap_fair_rite_list`, { parts: partnumbers }
-        // `https://scrapper.taraqe.com/scrap_fair_rite_list`, { parts: partnumbers }
-        `https://scrapper.taraqe.com/scrap_fair_rite_list`,
+        // `http://147.189.161.152/scrap_fair_rite_list`, { parts: partnumbers }
+        // `http://147.189.161.152/scrap_fair_rite_list`, { parts: partnumbers }
+        `http://147.189.161.152/scrap_fair_rite_list`,
         { parts: partnumbers }
       );
       if (response.data.length) {
@@ -809,8 +809,8 @@ export async function getLiveManufacturerData({
           partnumbers.map(async (keyword: string) => {
             keyword.trim().replace("/", "&45F");
             const response = await axios.get(
-              // `https://scrapper.taraqe.com/te/${keyword}`
-              `https://scrapper.taraqe.com/te/${keyword}`
+              // `http://147.189.161.152/te/${keyword}`
+              `http://147.189.161.152/te/${keyword}`
             );
             if (response && response.data.status !== 404) {
               rawData = [...rawData, ...[response.data]];
@@ -831,8 +831,8 @@ export async function getLiveManufacturerData({
       let rawData: any = [];
       let failedData: any = [];
       const response = await axios.post(
-        // `https://scrapper.taraqe.com/teList`, { parts: partnumbers }
-        `https://scrapper.taraqe.com/teList`,
+        // `http://147.189.161.152/teList`, { parts: partnumbers }
+        `http://147.189.161.152/teList`,
         { parts: partnumbers }
       );
       console.log(response.data);
@@ -860,9 +860,9 @@ export async function getLiveManufacturerData({
           partnumbers.map(async (keyword: string) => {
             keyword.trim().replace("/", "&45F");
             const response = await axios.get(
-              // `https://scrapper.taraqe.com/scrap_allegro/${keyword}`
-              // `https://scrapper.taraqe.com/scrap_allegro/${keyword}`
-              `https://scrapper.taraqe.com/scrap_allegro/${keyword}`
+              // `http://147.189.161.152/scrap_allegro/${keyword}`
+              // `http://147.189.161.152/scrap_allegro/${keyword}`
+              `http://147.189.161.152/scrap_allegro/${keyword}`
             );
             if (response && response.data.status !== 404) {
               rawData = [...rawData, ...[response.data]];
@@ -883,8 +883,8 @@ export async function getLiveManufacturerData({
       let rawData: any = [];
       let failedData: any = [];
       const response = await axios.post(
-        // `https://scrapper.taraqe.com/allegro_list`, { parts: partnumbers }
-        `https://scrapper.taraqe.com/scrap_allegro_list`,
+        // `http://147.189.161.152/allegro_list`, { parts: partnumbers }
+        `http://147.189.161.152/scrap_allegro_list`,
         { parts: partnumbers }
       );
       console.log(response.data);
@@ -912,9 +912,9 @@ export async function getLiveManufacturerData({
           partnumbers.map(async (keyword: string) => {
             keyword.trim().replace("/", "&45F");
             const response = await axios.get(
-              // `https://scrapper.taraqe.com/scrap_yageo/${keyword}`
-              // `https://scrapper.taraqe.com/scrap_yageo/${keyword}`
-              `https://scrapper.taraqe.com/scrap_yageo/${keyword}`
+              // `http://147.189.161.152/scrap_yageo/${keyword}`
+              // `http://147.189.161.152/scrap_yageo/${keyword}`
+              `http://147.189.161.152/scrap_yageo/${keyword}`
             );
             if (response && response.data.status !== 404) {
               rawData = [...rawData, ...[response.data]];
@@ -935,8 +935,8 @@ export async function getLiveManufacturerData({
       let rawData: any = [];
       let failedData: any = [];
       const response = await axios.post(
-        // `https://scrapper.taraqe.com/scrap_yageo_list`, { parts: partnumbers }
-        `https://scrapper.taraqe.com/scrap_yageo_list`,
+        // `http://147.189.161.152/scrap_yageo_list`, { parts: partnumbers }
+        `http://147.189.161.152/scrap_yageo_list`,
         { parts: partnumbers }
       );
       console.log(response.data);
@@ -964,9 +964,9 @@ export async function getLiveManufacturerData({
           partnumbers.map(async (keyword: string) => {
             keyword.trim().replace("/", "&45F");
             const response = await axios.get(
-              // `https://scrapper.taraqe.com/scrap_leespring/${keyword}`
-              // `https://scrapper.taraqe.com/scrap_leespring/${keyword}`
-              `https://scrapper.taraqe.com/scrap_leespring/${keyword}`
+              // `http://147.189.161.152/scrap_leespring/${keyword}`
+              // `http://147.189.161.152/scrap_leespring/${keyword}`
+              `http://147.189.161.152/scrap_leespring/${keyword}`
             );
             if (response && response.data.status !== 404) {
               rawData = [...rawData, ...[response.data]];
@@ -987,8 +987,8 @@ export async function getLiveManufacturerData({
       let rawData: any = [];
       let failedData: any = [];
       const response = await axios.post(
-        // `https://scrapper.taraqe.com/scrap_leespring_list`, { parts: partnumbers }
-        `https://scrapper.taraqe.com/scrap_leespring_list`,
+        // `http://147.189.161.152/scrap_leespring_list`, { parts: partnumbers }
+        `http://147.189.161.152/scrap_leespring_list`,
         { parts: partnumbers }
       );
       console.log(response, "--------");
@@ -1020,7 +1020,7 @@ export async function getLiveManufacturerData({
     const getData = async (index) => {
       const partnumber = partnumbers[index];
       const response = await axios.get(
-        `https://scrapper.taraqe.com/phoenix/${partnumber}`
+        `http://147.189.161.152/phoenix/${partnumber}`
       );
       if (response && response.data.status !== 404) {
         rawData = [...rawData, ...[response.data]];
@@ -1036,7 +1036,7 @@ export async function getLiveManufacturerData({
     // await Promise.all(
     //   partnumbers.map(async (partnumber) => {
     //     const response = await axios.get(
-    //       `https://scrapper.taraqe.com/phoenix/${partnumber}`
+    //       `http://147.189.161.152/phoenix/${partnumber}`
     //     );
     //     console.log(response.data);
     //     if (response && response.data.status !== 404) {
@@ -1069,7 +1069,7 @@ export async function getLiveDistributersData({
     let failedData: any = [];
     for (let partnumber of partnumbers) {
       const response = await axios.get(
-        `https://scrapper.taraqe.com/mouser/${partnumber}`
+        `http://147.189.161.152/mouser/${partnumber}`
       );
       if (response && response.data.status !== 404) {
         rawData = [...rawData, ...[response.data]];
@@ -1113,7 +1113,7 @@ export async function getLiveDistributersData({
         partnumber = "xyz";
       }
       const response = await axios.get(
-        `https://scrapper.taraqe.com/arrow/${partnumber}`
+        `http://147.189.161.152/arrow/${partnumber}`
       );
       if (response && response.data.status !== 404) {
         rawData = [...rawData, ...[response.data]];
@@ -1135,7 +1135,7 @@ export async function getLiveDistributersData({
     // await Promise.all(
     //   partnumbers.map(async (partnumber) => {
     //     const response = await axios.get(
-    //       `https://scrapper.taraqe.com/arrow/${partnumber}`
+    //       `http://147.189.161.152/arrow/${partnumber}`
     //     );
     //     if (response && response.data.status !== 404) {
     //       rawData = [...rawData, ...[response.data]];
@@ -1155,7 +1155,7 @@ export async function getLiveDistributersData({
       partnumbers.map(async (partnumber) => {
         partnumber = partnumber.replace(/\//g, ":");
         const response = await axios.get(
-          `https://scrapper.taraqe.com/maxim/${partnumber}`
+          `http://147.189.161.152/maxim/${partnumber}`
         );
         if (response && response.data.status !== 404) {
           rawData = [...rawData, ...[response.data]];
@@ -1174,7 +1174,7 @@ export async function getLiveDistributersData({
     await Promise.all(
       partnumbers.map(async (partnumber) => {
         const response = await axios.get(
-          `https://scrapper.taraqe.com/rscomponents/${partnumber}`
+          `http://147.189.161.152/rscomponents/${partnumber}`
         );
 
         if (response && response.data.status !== 404) {
@@ -1213,8 +1213,8 @@ export async function getLiveDistributersData({
         await Promise.all(
           partnumbers.map(async (keyword: string) => {
             const response = await axios.get(
-              // `https://scrapper.taraqe.com/scrap_alliedelectronics/${keyword}`
-              `https://scrapper.taraqe.com/scrap_alliedelectronics/${keyword}`
+              // `http://147.189.161.152/scrap_alliedelectronics/${keyword}`
+              `http://147.189.161.152/scrap_alliedelectronics/${keyword}`
             );
             if (response && response.data.status !== 404) {
               rawData = [...rawData, ...[response.data]];
@@ -1235,8 +1235,8 @@ export async function getLiveDistributersData({
       let rawData: any = [];
       let failedData: any = [];
       const response = await axios.post(
-        // `https://scrapper.taraqe.com/scrap_alliedelectronics_list`, { parts: partnumbers }
-        `https://scrapper.taraqe.com/scrap_alliedelectronics_list`,
+        // `http://147.189.161.152/scrap_alliedelectronics_list`, { parts: partnumbers }
+        `http://147.189.161.152/scrap_alliedelectronics_list`,
         { parts: partnumbers }
       );
       console.log(response.data);
@@ -1263,8 +1263,8 @@ export async function getLiveDistributersData({
         await Promise.all(
           partnumbers.map(async (keyword: string) => {
             const response = await axios.get(
-              // `https://scrapper.taraqe.com/scrap_rshughes/${keyword}`
-              `https://scrapper.taraqe.com/scrap_rshughes/${keyword}`
+              // `http://147.189.161.152/scrap_rshughes/${keyword}`
+              `http://147.189.161.152/scrap_rshughes/${keyword}`
             );
             if (response && response.data.status !== 404) {
               rawData = [...rawData, ...[response.data]];
@@ -1285,8 +1285,8 @@ export async function getLiveDistributersData({
       let rawData: any = [];
       let failedData: any = [];
       const response = await axios.post(
-        // `https://scrapper.taraqe.com/scrap_rshughes_list`, { parts: partnumbers }
-        `https://scrapper.taraqe.com/sscrap_rshughes_list`,
+        // `http://147.189.161.152/scrap_rshughes_list`, { parts: partnumbers }
+        `http://147.189.161.152/sscrap_rshughes_list`,
         { parts: partnumbers }
       );
       console.log(response.data);
@@ -1313,8 +1313,8 @@ export async function getLiveDistributersData({
         await Promise.all(
           partnumbers.map(async (keyword: string) => {
             const response = await axios.get(
-              // `https://scrapper.taraqe.com/scrap_tdk/${keyword}`
-              `https://scrapper.taraqe.com/scrap_sager/${keyword}`
+              // `http://147.189.161.152/scrap_tdk/${keyword}`
+              `http://147.189.161.152/scrap_sager/${keyword}`
             );
             if (response && response.data.status !== 404) {
               rawData = [...rawData, ...[response.data]];
@@ -1335,8 +1335,8 @@ export async function getLiveDistributersData({
       let rawData: any = [];
       let failedData: any = [];
       const response = await axios.post(
-        // `https://scrapper.taraqe.com/scrap_tdk_list`, { parts: partnumbers }
-        `https://scrapper.taraqe.com/scrap_sager_list`,
+        // `http://147.189.161.152/scrap_tdk_list`, { parts: partnumbers }
+        `http://147.189.161.152/scrap_sager_list`,
         { parts: partnumbers }
       );
       console.log(response.data);
